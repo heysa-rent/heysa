@@ -1,0 +1,227 @@
+/* هَيصة ميديا — Haysa Media landing page */
+:root {
+  --ink: #ffffff;
+  --ink-2: #c8dcd8;
+  --hairline: rgba(255, 255, 255, 0.16);
+  --gold: #f2a83b;
+  --deep: #072327;
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Tahoma, Arial, sans-serif;
+  background: var(--deep);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.haysa {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 24px 40px;
+  background: linear-gradient(180deg, #0e4148 0%, #0a3238 55%, #072327 100%);
+  min-height: 100vh;
+}
+
+/* ---------- Hero ---------- */
+.haysa-hero { text-align: center; margin-bottom: 56px; }
+
+.haysa-eyebrow {
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 6px 16px;
+  border: 1px solid rgba(242, 168, 59, 0.55);
+  border-radius: 999px;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.haysa-brand {
+  margin: 0;
+  font-size: clamp(44px, 13vw, 76px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.haysa-latin {
+  margin: 6px 0 0;
+  color: var(--gold);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.42em;
+}
+
+.haysa-tagline {
+  margin: 24px auto 0;
+  max-width: 30ch;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.haysa-sub {
+  margin: 10px auto 0;
+  max-width: 40ch;
+  color: var(--ink-2);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ---------- CTA buttons ---------- */
+.haysa-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 13px 30px;
+  min-height: 48px;
+  background: var(--gold);
+  color: var(--deep);
+  font-size: 17px;
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.haysa-cta:hover, .haysa-cta:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(242, 168, 59, 0.35);
+}
+.haysa-cta-big { padding: 15px 44px; font-size: 19px; }
+
+/* ---------- Sections ---------- */
+.haysa-section { margin-bottom: 56px; }
+
+.haysa-section-title {
+  margin: 0 0 18px;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.haysa-section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--hairline);
+}
+
+/* ---------- Cards ---------- */
+.haysa-grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
+
+.haysa-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.haysa-num {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.haysa-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--deep);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.haysa-card-title { margin: 10px 0 0; font-size: 17px; font-weight: 800; line-height: 1.5; }
+.haysa-card-detail { margin: 6px 0 0; color: var(--ink-2); font-size: 14px; line-height: 1.7; }
+
+/* ---------- Work samples ---------- */
+.haysa-photos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.haysa-photo {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+}
+.haysa-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.haysa-photo:hover img { transform: scale(1.02); }
+
+.haysa-note {
+  margin: 14px 0 0;
+  color: var(--ink-2);
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ---------- Contact ---------- */
+.haysa-contact { text-align: center; }
+.haysa-contact-text { margin: 0 auto; max-width: 34ch; color: var(--ink-2); font-size: 15px; line-height: 1.7; }
+.haysa-phone { margin: 14px 0 0; font-size: 17px; font-weight: 700; letter-spacing: 0.04em; }
+
+.haysa-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 18px; }
+.haysa-chip {
+  padding: 9px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+.haysa-footer {
+  border-top: 1px solid var(--hairline);
+  padding-top: 20px;
+  text-align: center;
+  color: var(--ink-2);
+  font-size: 13px;
+}
+
+/* ---------- Reveal on scroll (only when JS is on) ---------- */
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+html.js .reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  html.js .reveal { opacity: 1; transform: none; transition: none; }
+  .haysa-cta, .haysa-photo img { transition: none; }
+}
+
+/* ---------- Wider screens ---------- */
+@media (min-width: 640px) {
+  .haysa-grid { grid-template-columns: 1fr 1fr; }
+  .haysa-grid-why { grid-template-columns: 1fr 1fr 1fr; }
+  .haysa-photos { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+@media (min-width: 768px) {
+  .haysa { padding: 64px 40px 48px; }
+  .haysa-tagline { font-size: 26px; }
+}
